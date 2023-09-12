@@ -2,9 +2,9 @@ node{
     stage('Scm Checkout'){
         git branch: 'main', credentialsId: 'git_hub', url: 'https://github.com/manoranjanmajumdar001/jenkinsprojectfile.git'
     }
-    stage('Mvn Package'){
+  //  stage('Mvn Package'){
         def mvnHome = tool name: 'maven-3', type: 'maven'
-        sh "${mvnHome}/bin/mvn clean package"
+        sh "${mvnHome}/bin/mvn clean package" //
     }
     stage('Build Docker Image'){
         sh 'docker build -t devopshub123/flask_demo_latest:2.0.0 .'
