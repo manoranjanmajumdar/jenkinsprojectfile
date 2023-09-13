@@ -7,11 +7,11 @@ node{
         sh "${mvnHome}/bin/mvn clean package" 
     }
     stage('Build Docker Image'){
-        sh 'docker build -t devopshub123/flask_demo_latest:2.0.0 .'
+        sh 'docker build -t manoranjanmajumdar/flask_demo_latest:2.0.0 .'
     }
     stage('Push image') {
         withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
-        sh "docker push devopshub123/flask_demo_latest:2.0.0"
+        sh "docker push manoranjanmajumdar/flask_demo_latest:2.0.0"
         }
     }
     stage('login server'){
