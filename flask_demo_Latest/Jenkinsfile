@@ -16,11 +16,11 @@ node{
     }
     stage('login server'){
         sshagent(['root_ssh_key']){
-            sh "ssh -o StrictHostKeyChecking=no root@13.127.209.175 'whoami'"
-            sh "ssh -o StrictHostKeyChecking=no root@13.127.209.175 'sudo yum update'"
-            sh "ssh -o StrictHostKeyChecking=no root@13.127.209.175 'ls -l'"
-            sh "ssh -o StrictHostKeyChecking=no root@13.127.209.175 'docker pull devopshub123/flask_demo_latest:2.0.0'"
-            sh "ssh -o StrictHostKeyChecking=no root@13.127.209.175 'docker run -d -p 80:8080 --name=mydemo5 devopshub123/flask_demo_latest:2.0.0'"
+            sh "ssh -o StrictHostKeyChecking=no root@54.91.195.81 'whoami'"
+            sh "ssh -o StrictHostKeyChecking=no root@54.91.195.81 'sudo yum update'"
+            sh "ssh -o StrictHostKeyChecking=no root@54.91.195.81 'ls -l'"
+            sh "ssh -o StrictHostKeyChecking=no root@54.91.195.81 'docker pull devopshub123/flask_demo_latest:2.0.0'"
+            sh "ssh -o StrictHostKeyChecking=no root@54.91.195.81 'docker run -d -p 80:8080 --name=mydemo5 devopshub123/flask_demo_latest:2.0.0'"
             
         }
     }
